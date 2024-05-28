@@ -1,13 +1,13 @@
-# Tunnel Try-on
+# VITON-DiT
 
-This is the repository that contains source code for the webpage of Tunnel Try-on.
+This is the repository that contains source code for the webpage of VITON-DiT.
 
-If you find Tunnel Try-on useful for your work please cite:
+If you find VITON-DiT useful for your work please cite:
 
 ```
-@article{xu2024tunnel,
-      title={Tunnel Try-on: Excavating Spatial-temporal Tunnels for High-quality Virtual Try-on in Videos},
-      author={Xu, Zhengze and Chen, Mengting and Wang, Zhao and Xing, Linyu and Zhai, Zhonghua and Sang, Nong and Lan, Jinsong and Xiao, Shuai and Gao, Changxin},
+@article{zheng2024vitondit,
+      title={VITON-DiT: Learning In-the-Wild Video Try-On from Human Dance Videos via Diffusion Transformers},
+      author={Zheng, Jun and Zhao, Fuwei and Xu, Youjiang and Dong, Xin and Liang, Xiaodan},
       journal={arXiv preprint},
       year={2024}
 ```

@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Tunnel Try-on">
+        content="VITON-DiT">
   <meta name="keywords" content="Virtual Try-on, Customizable Generation, Diffusion Model">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Tunnel Try-on</title>
+  <title>VITON-DiT</title>
 
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -59,45 +59,33 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Tunnel Try-on: Excavating Spatial-temporal Tunnels for High-quality Virtual Try-on in Videos</h1>
+          <h1 class="title is-1 publication-title">VITON-DiT: Learning In-the-Wild Video Try-On from Human Dance Videos via Diffusion Transformers</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              Zhengze Xu<sup>1 <sup> </a>&nbsp</a>&nbsp  
+              Jun Zheng<sup>1 <sup> </a>&nbsp</a>&nbsp  
             </span>
             <span class="author-block">
-              Mengting Chen<sup>2<sup> </a>&nbsp</a>&nbsp  
+              Fuwei Zhao<sup>2<sup> </a>&nbsp</a>&nbsp  
             </span>
             
             <span class="author-block">
-              Zhao Wang<sup>2<sup>  </a></a>&nbsp</a>&nbsp  
+              Youjiang Xu<sup>2<sup>  </a></a>&nbsp</a>&nbsp  
             </span>
             <span class="author-block">
-              Linyu Xing<sup>2</sup>  </a></a>&nbsp</a>&nbsp  
+              Xin Dong<sup>2</sup>  </a></a>&nbsp</a>&nbsp  
             </span>
             <span class="author-block">
-              Zhonghua Zhai<sup>2</sup>  </a></a>&nbsp</a>&nbsp  
-            </span>
-            <span class="author-block">
-              Nong Sang<sup>1</sup>  </a></a>&nbsp</a>&nbsp  
-            </span>
-            <span class="author-block">
-              Jinsong Lan<sup>2</sup>   </a></a>&nbsp</a>&nbsp  
-            </span>
-            <span class="author-block">
-              Shuai Xiao<sup>2</sup>   </a></a>&nbsp</a>&nbsp  
-            </span>
-            <span class="author-block">
-              Changxin Gao<sup>1</sup>   </a></a>&nbsp</a>&nbsp  
+              Xiaodan Liang<sup>1</sup>  </a></a>&nbsp</a>&nbsp  
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>Huazhong University of Science and Technology</a>&nbsp</a>&nbsp  </span>
+            <span class="author-block"><sup>1</sup>Shenzhen Campus of Sun Yat-Sen University</a>&nbsp</a>&nbsp  </span>
             
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>2</sup>Alibaba Group</a>&nbsp</a>&nbsp  </span>
+            <span class="author-block"><sup>2</sup>ByteDance</a>&nbsp</a>&nbsp  </span>
             
           </div>
 
@@ -105,14 +93,43 @@
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href=   "https://arxiv.org/abs/2404.17571"
+                <a href=""
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                   </span>
                   <span>Paper</span>
                 </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark" disabled>
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
                 </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark" disabled>
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark" disabled>
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
             </div>
 
           </div>
@@ -141,19 +158,10 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Video try-on is a challenging task and has not been well tackled in previous works. The main obstacle lies in preserving the details of the clothing and modeling the coherent motions simultaneously.
-
-            Faced with those difficulties, we address video try-on by proposing a diffusion-based framework named "<b>Tunnel Try-on</b>".  
-
-            The core idea is excavating a ``focus tunnel'' in the input video that gives close-up shots around the clothing regions. We zoom in on the region in the tunnel to better preserve the fine details of the clothing.
-
-            To generate coherent motions, we first leverage the Kalman filter to construct smooth crops in the focus tunnel and inject the position embedding of the tunnel into attention layers to improve the continuity of the generated videos.
-
-            In addition, we develop an environment encoder to extract the context information outside the tunnels as supplementary cues.
-
-            Equipped with these techniques, Tunnel Try-on keeps the fine details of the clothing and synthesizes stable and smooth videos.
-
-            Demonstrating significant advancements, Tunnel Try-on could be regarded as the first attempt toward the commercial-level application of virtual try-on in videos.
+            Video try-on stands as a promising area for its tremendous real-world potential. Prior works are limited to transferring product clothing images onto person videos with simple poses and backgrounds, while underperforming on casually captured videos. 
+            Recently, Sora revealed the scalability of Diffusion Transformer (DiT) in generating lifelike videos featuring real-world scenarios. Inspired by this, we explore and propose the first DiT-based video try-on framework for practical in-the-wild applications, named <b>VITON-DiT</b>. Specifically, VITON-DiT consists of a garment extractor, a Spatial-Temporal denoising  DiT, and an identity preservation ControlNet. 
+            To faithfully recover the clothing details, the extracted garment features are fused with the self-attention outputs of the denoising DiT and the ControlNet. We also introduce novel random selection strategies during training and an Interpolated Auto-Regressive (IAR) technique at inference to facilitate long video generation. Unlike existing attempts that require the laborious and restrictive construction of a paired training dataset, severely limiting their scalability, VITON-DiT alleviates this by relying solely on unpaired human dance videos and a carefully designed multi-stage training strategy. 
+            Furthermore, we curate a challenging benchmark dataset to evaluate the performance of casual video try-on. Extensive experiments demonstrate the superiority of VITON-DiT in generating spatio-temporal consistent try-on results for in-the-wild videos with complicated human poses.
           </p>
           </p>
         </div>
@@ -169,109 +177,124 @@
 
          <div class="columns is-centered">
           <div class="column is-full-width">
-            <h2 class="title is-3" style="text-align: center;">Adapting to Varied Camera-Person Relationships</h2>
+            <h2 class="title is-3" style="text-align: center;">Adapting to Different Clothing Styles and Scenes</h2>
               <div class="content has-text-justified">
                 <p>
-                  Tunnel Try-on can not only handle complex clothing and backgrounds but also adapt to different types of movements in the video.
+                  VITON-DiT can handle complex clothing and backgrounds with unstable pose guidance.
                 </p>
               </div>
-            <h2 class="title is-4" style="text-align: center;">Person-to-Camera Distance Variation</h2>
+            <h2 class="title is-4" style="text-align: center;">Simple Clothing and Static Backgrounds</h2>
             <div class="columns is-centered is-multiline">
               <div class="column">
                 <video width="960" height="720" controls>
-                  <source src="generate_images/videos/motion_type1.mp4" type="video/mp4" width="960" height="360">
-                  <source src="movie.ogg" type="video/ogg">
-                  <source src="movie.webm" type="video/webm">
-                  <object data="generate_images/videos/motion_type1.mp4" width="960" height="720">
-                    <embed src="movie.swf" width="960" height="720">
-                  </object>
+                  <source src="generate_images/videos/fashionvideo_unpair_processed.mp4" type="video/MP4" width="960" height="384">
+                </video>
+              </div>
+              <div class="column">
+                <video width="960" height="720" controls>
+                  <source src="generate_images/videos/tiktok_unpair_processed.mp4" type="video/MP4" width="960" height="384">
                 </video>
               </div>
             </div>
-            <h2 class="title is-4" style="text-align: center;">Parallel Motion Relative to the Camera</h2>
-              <div class="columns is-centered is-multiline">
-              <div class="column">
-              <video width="960" height="720" controls>
-                <source src="generate_images/videos/motion_type2.mp4" type="video/mp4" width="960" height="720">
-                <source src="movie.ogg" type="video/ogg">
-                <source src="movie.webm" type="video/webm">
-                <object data="generate_images/videos/motion_type2.mp4" width="960" height="720">
-                  <embed src="movie.swf" width="960" height="720">
-                </object>
-              </video>
-              </div>
-            </div>
-            <h2 class="title is-4" style="text-align: center;">Camera Angle Dynamics</h2>
             <div class="columns is-centered is-multiline">
               <div class="column">
-              <video width="960" height="720" controls>
-                <source src="generate_images/videos/motion_type3.mp4" type="video/mp4" width="960" height="720">
-                <source src="movie.ogg" type="video/ogg">
-                <source src="movie.webm" type="video/webm">
-                <object data="generate_images/videos/motion_type3.mp4" width="960" height="720">
-                  <embed src="movie.swf" width="960" height="720">
-                </object>
-              </video>
+                <video width="960" height="720" controls>
+                  <source src="generate_images/videos/unpair3_processed.mp4" type="video/MP4" width="960" height="384">
+                </video>
+              </div>
+              <div class="column">
+                <video width="960" height="720" controls>
+                  <source src="generate_images/videos/unpair2_processed.mp4" type="video/MP4" width="960" height="384">
+                </video>
+              </div>
+            </div>
+
+            <h2 class="title is-4" style="text-align: center;">Challenging Clothing and In-the-Wild Scenes</h2>
+            <div class="columns is-centered is-multiline">
+              <div class="column">
+                <video width="960" height="720" controls>
+                  <source src="generate_images/videos/BV11Y4y1d7DF_scene-0@BV1144y1t74R_scene-7_processed.mp4" type="video/MP4" width="960" height="384">
+                </video>
+              </div>
+              <div class="column">
+                <video width="960" height="720" controls>
+                  <source src="generate_images/videos/unpair1_processed.mp4" type="video/MP4" width="960" height="384">
+                </video>
+              </div>
+            </div>
+            <div class="columns is-centered is-multiline">
+              <div class="column">
+                <video width="960" height="720" controls>
+                  <source src="generate_images/videos/BV1Ht4y1K7uL_scene-1@BV113411D7yb_scene-3_processed.mp4" type="video/MP4" width="960" height="384">
+                </video>
+              </div>
+              <div class="column">
+                <video width="960" height="720" controls>
+                  <source src="generate_images/videos/BV1G3411W7YA_scene-7@BV1ak4y1X7Sa_scene-1_processed.mp4" type="video/MP4" width="960" height="384">
+                </video>
               </div>
             </div>
 
 
         <div class="columns is-centered">
           <div class="column is-full-width">
-            <h2 class="title is-3" style="text-align: center;">Adapting to Different Clothing Styles</h2>
+            <h2 class="title is-3" style="text-align: center;">Adapting to Different Human Poses</h2>
               <div class="content has-text-justified">
                 <p>
-                  Unlike previous video try-on methods limited to fitting tight-fitting tops, Our Tunnel Try-on can perform try-on tasks for different types of tops and bottoms.
+                  Unlike previous video try-on methods limited to simple human poses and slow movement, Our VITON-DiT can perform try-on tasks for complicated poses.
                 </p>
+              </div>            
+              <h2 class="title is-4" style="text-align: center;">Simple Poses and Slow Motion</h2>
+              <div class="columns is-centered is-multiline">
+                <div class="column">
+                  <video width="960" height="720" controls>
+                    <source src="generate_images/videos/BV1fx4y1C79z_scene-1@BV1Nc411y7m3_scene-1_processed.mp4" type="video/MP4" width="960" height="384">
+                  </video>
+                </div>
+                <div class="column">
+                  <video width="960" height="720" controls>
+                    <source src="generate_images/videos/BV1SA411Z7wF_scene-3@BV13B4y157pZ_scene-3_processed.mp4" type="video/MP4" width="960" height="384">
+                  </video>
+                </div>
               </div>
-            <div class="columns is-centered has-text-centered">
-              <div class="column">
-                <video width="960" height="720" controls>
-                  <source src="generate_images/videos/appendix_figure8_a_tops2tops.mp4" type="video/mp4" width="960" height="720">
-                  <source src="movie.ogg" type="video/ogg">
-                  <source src="movie.webm" type="video/webm">
-                  <object data="generate_images/videos/appendix_figure8_a_tops2tops.mp4" width="960" height="720">
-                    <embed src="movie.swf" width="960" height="720">
-                  </object>
-                </video>
+              <div class="columns is-centered is-multiline">
+                <div class="column">
+                  <video width="960" height="720" controls>
+                    <source src="generate_images/videos/BV16v4y1v7eP_scene-9@BV1Ab4y1q71A_scene-0_processed.mp4" type="video/MP4" width="960" height="384">
+                  </video>
+                </div>
+                <div class="column">
+                  <video width="960" height="720" controls>
+                    <source src="generate_images/videos/BV12x411Q7dh_scene-2@BV11e4y1J75D_scene-3_processed.mp4" type="video/MP4" width="960" height="384">
+                  </video>
+                </div>
               </div>
-            </div>
-            <div class="columns is-centered has-text-centered">
-              <div class="column">
-                <video width="960" height="720" controls>
-                  <source src="generate_images/videos/appendix_figure8_b_tops2tops.mp4" type="video/mp4" width="960" height="720">
-                  <source src="movie.ogg" type="video/ogg">
-                  <source src="movie.webm" type="video/webm">
-                  <object data="generate_images/videos/appendix_figure8_b_tops2tops.mp4" width="960" height="720">
-                    <embed src="movie.swf" width="960" height="720">
-                  </object>
-                </video>
+  
+              <h2 class="title is-4" style="text-align: center;">Complex Body Movements</h2>
+              <div class="columns is-centered is-multiline">
+                <div class="column">
+                  <video width="960" height="720" controls>
+                    <source src="generate_images/videos/BV1144y1t74R_scene-9@BV12H4y177Hw_scene-6_processed.mp4" type="video/MP4" width="960" height="384">
+                  </video>
+                </div>
+                <div class="column">
+                  <video width="960" height="720" controls>
+                    <source src="generate_images/videos/BV1WF4m1M7zQ_scene-1@BV1ee4y1q7nv_scene-7_processed.mp4" type="video/MP4" width="960" height="384">
+                  </video>
+                </div>
               </div>
-            </div>
-            <div class="columns is-centered has-text-centered">
-              <div class="column">
-                <video width="960" height="720" controls>
-                  <source src="generate_images/videos/appendix_figure7_a_bottoms2bottoms.mp4" type="video/mp4" width="960" height="720">
-                  <source src="movie.ogg" type="video/ogg">
-                  <source src="movie.webm" type="video/webm">
-                  <object data="generate_images/videos/appendix_figure7_a_bottoms2bottoms.mp4" width="960" height="720">
-                    <embed src="movie.swf" width="960" height="720">
-                  </object>
-                </video>
+              <div class="columns is-centered is-multiline">
+                <div class="column">
+                  <video width="960" height="720" controls>
+                    <source src="generate_images/videos/BV1Rz421y7Ws_scene-9@BV1Kh411q71N_scene-1_processed.mp4" type="video/MP4" width="960" height="384">
+                  </video>
+                </div>
+                <div class="column">
+                  <video width="960" height="720" controls>
+                    <source src="generate_images/videos/BV1m64y1H7Eb_scene-3@BV1Aj411M7fR_scene-0_processed.mp4" type="video/MP4" width="960" height="384">
+                  </video>
+                </div>
               </div>
-            </div>
-            <div class="columns is-centered has-text-centered">
-              <div class="column">
-                <video width="960" height="720" controls>
-                  <source src="generate_images/videos/appendix_figure7_b_bottoms2bottoms.mp4" type="video/mp4" width="960" height="720">
-                  <source src="movie.ogg" type="video/ogg">
-                  <source src="movie.webm" type="video/webm">
-                  <object data="generate_images/videos/appendix_figure7_b_bottoms2bottoms.mp4" width="960" height="720">
-                    <embed src="movie.swf" width="960" height="720">
-                  </object>
-                </video>
-              </div>
-            </div>
 
 
             <div class="columns is-centered">
@@ -279,52 +302,20 @@
                 <h2 class="title is-3" style="text-align: center;">Framework</h2>
                   <div class="content has-text-justified">
                     <p>
-                      Given an input video and a clothing image, Tunnel Try-on first extracts a focus tunnel to zoom in on the region around the garments to better preserve the details. The zoomed region is represented by a sequence of tensors consisting of the background latent, latent noise, and the garment mask. Human pose information is added to the latent noise to assist the generation. Afterward, the 9-channel tensor is fed into the Main U-Net while a Ref U-Net and a CLIP Encoder are used to extract the representations of the clothing image, the clothing representations are added to the Main U-Net with the ref-attention.  At the same time, Tunnel Try-on utilizes the tunnel embedding into temporal attention to generate more consistent motions
-        and develop an environment encoder to extract the global context as additional guidance.
+                      Overview of the proposed VITON-DiT. 
+                      <p>(a) The architecture contains three components with the following tasks. (1) <i>Denoising DiT</i> : generating latent representation of video contents via a chain of Spatio-Temporal (ST-) DiT blocks. (2) <i>ID ControlNet</i> : producing feature residual for the Denoising DiT to preserve the reference person's identity, pose, and background. (3) <i>Garment Extractor</i> : obtaining and delivering garment features into the Denoising DiT and the ControlNet via attention fusion, thus recovering detailed clothing textures in the generated try-on video. </p>
+                      <p>(b) Illustrated Attention Fusion: integrating person denoising features and extracted garment features using additive attention. This operation is utilized in both the Denoising DiT and the ID ControlNet.</p>
+                      
                     </p>
                   </div>
                 <div class="columns is-centered has-text-centered">
                   <div class="column">
                     <div class="item item-steve">
-                      <img src="./generate_images/images/fig2_overall-arch_v2.png"  width="80%">
+                      <img src="./generate_images/images/VITON-DiT.png"  width="90%">
                     </div>   
                       
                   </div>
                 </div>
-        <!-- <div class="columns is-centered">
-          <div class="column is-full-width">
-            <h2 class="title is-3" style="text-align: center;">Single-garment try-on</h2>
-              <div class="content has-text-justified">
-                <p>
-                  Wear-Any-Way supports various of input types including shop-to-model, model-to-model, shop-to-street, model-to-street, street-to-street, etc.
-                </p>
-              </div>
-            <div class="columns is-centered has-text-centered">
-              <div class="column">
-                <div class="item item-steve">
-                  <img src="./generate_images/images/base/supply_fig_3_single_for_page_new.png"  width="100%">
-                </div>   
-                  
-              </div>
-            </div>
-
-        <div class="columns is-centered">
-          <div class="column is-full-width">
-            <h2 class="title is-3" style="text-align: center;">Multi-garment try-on</h2>
-              <div class="content has-text-justified">
-                <p>
-                  Wear-Any-Way enables users to provide upper- and down-clothes simultaneously and generates the try-on results in one pass.
-                </p>
-              </div>
-            <div class="columns is-centered has-text-centered">
-              <div class="column">
-                <div class="item item-steve">
-                  <img src="./generate_images/images/base/supply_fig_2_outfit_for_page_new.png"  width="100%">
-                </div>   
-                  
-              </div>
-            </div>
-  </div> -->
 </section>
 
 
@@ -333,9 +324,9 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{xu2024tunnel,
-      title={Tunnel Try-on: Excavating Spatial-temporal Tunnels for High-quality Virtual Try-on in Videos},
-      author={Xu, Zhengze and Chen, Mengting and Wang, Zhao and Xing, Linyu and Zhai, Zhonghua and Sang, Nong and Lan, Jinsong and Xiao, Shuai and Gao, Changxin},
+    <pre><code>@article{zheng2024vitondit,
+      title={VITON-DiT: Learning In-the-Wild Video Try-On from Human Dance Videos via Diffusion Transformers},
+      author={Zheng, Jun and Zhao, Fuwei and Xu, Youjiang and Dong, Xin and Liang, Xiaodan},
       journal={arXiv preprint},
       year={2024}
     }</code></pre>
