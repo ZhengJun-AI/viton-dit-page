@@ -123,8 +123,8 @@
               </span>
               <!-- Dataset Link. -->
               <span class="link-block">
-                <a href=""
-                   class="external-link button is-normal is-rounded is-dark" disabled>
+                <a href="https://drive.google.com/drive/folders/1RbBxMbGBDPilsFGfwgcmznM81--OGWLq?usp=drive_link"
+                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="far fa-images"></i>
                   </span>
@@ -180,7 +180,7 @@
             <h2 class="title is-3" style="text-align: center;">Adapting to Different Clothing Styles and Scenes</h2>
               <div class="content has-text-justified">
                 <p>
-                  VITON-DiT can handle complex clothing and backgrounds with unstable pose guidance.
+                  VITON-DiT can handle complex clothing and backgrounds even with less accurate pose conditions.
                 </p>
               </div>
             <h2 class="title is-4" style="text-align: center;">Simple Clothing and Static Backgrounds</h2>
@@ -327,7 +327,7 @@
                   <div class="content has-text-justified">
                     <p>
                       Overview of the proposed VITON-DiT. 
-                      <p>(a) The architecture contains three components with the following tasks. (1) <i>Denoising DiT</i> : generating latent representation of video contents via a chain of Spatio-Temporal (ST-) DiT blocks. (2) <i>ID ControlNet</i> : producing feature residual for the Denoising DiT to preserve the reference person's identity, pose, and background. (3) <i>Garment Extractor</i> : obtaining and delivering garment features into the Denoising DiT and the ControlNet via attention fusion, thus recovering detailed clothing textures in the generated try-on video. </p>
+                      <p>(a) The architecture contains three components with the following tasks. (1) <i>Denoising DiT</i> : generating latent representation of video contents via a chain of Spatio-Temporal (ST-) DiT blocks. (2) <i>ID ControlNet</i> : producing feature residual for the Denoising DiT to preserve the reference person's identity, pose, and background. (3) <i>Garment Extractor</i> : obtaining and delivering garment features into the Denoising DiT and the ControlNet via Attention Fusion, thus recovering detailed clothing textures in the generated try-on video. </p>
                       <p>(b) Illustrated Attention Fusion: integrating person denoising features and extracted garment features using additive attention. This operation is utilized in both the Denoising DiT and the ID ControlNet.</p>
                       
                     </p>
